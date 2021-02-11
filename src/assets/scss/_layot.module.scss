@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './controls/theme_query.mixin.scss';
 
 .menu {
   padding: 1rem;
@@ -76,12 +77,17 @@
 
 .menuIcon {
   background-color: transparent;
-  width: 13vw;
+  width: 10vw;
   position: fixed;
   right: 5%;
   bottom: 8%;
   z-index: 100;
   border: transparent;
+
+  @include tablet {
+    display: none;
+
+  }
 }
 
 .sideMenuBackground {
@@ -245,13 +251,12 @@
   }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 992px) {
   .main {
-    width: 100vw;
+    width: 100vw;    
   }
   .footer {
-    height: fit-content;
-    
+    height: fit-content;    
     .footerContainer {
       .siteMap {
         order: 1;
@@ -261,7 +266,7 @@
         order: 4;
 
         a {
-          width: 80%;
+          width: 40%;
           display: block;
           margin: 0 auto;
         }
@@ -270,7 +275,7 @@
 
       .speechBubbles {
         order: 2;
-        margin-top: 2rem;
+        margin-top: 4rem;
 
         div:nth-child(1) {
           margin-left: 0;
@@ -292,14 +297,14 @@
           width: 20%;
 
           svg {
-            width: 100%;
-            height: 100%;
+            width: 50%;
+            height: 50%;
           }
         }
 
         a:nth-child(2) {
           svg {
-            width: 150%;
+            width: 100%;
           }
         }
       }
@@ -310,6 +315,7 @@
 
         p {
           text-align: center;
+          padding-bottom: 2rem;
         }
       }
     }

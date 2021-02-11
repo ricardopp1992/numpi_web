@@ -1,5 +1,6 @@
 import React, { CSSProperties, FunctionComponent, useEffect, useState } from 'react';
 import Link from 'next/link';
+import { Col} from 'react-bootstrap';
 
 import { ISideMenu } from '../interfaces/components.interfaces';
 
@@ -55,7 +56,7 @@ const SideMenu: FunctionComponent<ISideMenu> = ({isVisible, closeMenu}) => {
           <Link href="/blog"><a>Aprende</a></Link>
           <Link href="/productos"><a>Productos</a></Link>
         </div>
-      </div>
+    </div>
     </div>
   )
 }

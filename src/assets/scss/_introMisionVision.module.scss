@@ -1,3 +1,5 @@
+@import './controls/theme_query.mixin.scss';
+
 .introSection {
   position: relative;
   z-index: 0;
@@ -41,6 +43,7 @@
       height: fit-content;
       height: -moz-fit-content;
     }
+    
   }
 
   .introPartTow {
@@ -50,7 +53,7 @@
   }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 992px) {
   .introSection {
     margin: 0;
 
@@ -70,3 +73,5 @@
     // }
   }
 }
+
+
