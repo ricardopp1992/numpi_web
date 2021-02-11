@@ -1,0 +1,155 @@
+@import './variables.scss';
+
+/** ============= HEADER BLOG ============= */
+.blogHeader_background {
+  width: 100vw;
+  height: 30vh;
+  padding-top: 3rem;
+
+  h1 {
+    font-family: $balooBhai;
+    color: $green;
+    font-weight: bold;
+    font-size: 3.5rem;
+  }
+
+  h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2.5rem;
+    color: rgba(0,0,0,.4);
+  }
+
+  .categoriesList {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    width: 100%;
+    height: 5rem;
+
+    button {
+      background-color: $blue;
+      margin-right: 1rem;
+      padding: .5rem .7rem;
+      min-width: 5rem;
+      width: fit-content;
+      height: fit-content;
+      text-align: center;
+      font-size: 1.3rem;
+      font-family: $balooBhai;
+      font-weight: bold;
+      color: #fff;
+      border-radius: 15px;
+      border: none;
+      transition: all .5s ease-in-out;
+      box-shadow: 1px 2px 0 rgba(0,0,0,.12);
+    }
+
+    button:hover {
+      background-color: $green;
+      text-decoration: underline;
+    }
+  }
+}
+
+
+/** ============= HEADER ARTICLE ============= */
+.headerArticleBg {
+  background-color: $green;
+  background-position: 100% 100%;
+  width: 100vw;
+  min-height: 10rem;
+}
+
+.headerArticle {
+  margin-top: 3rem;
+  position: relative;
+  max-height: 30vw;
+  margin-bottom: 2rem;
+
+  img {
+    width: 75%;
+    height: 100%;
+  }
+
+  .articleTitle {
+    background-color: $blue;
+    float: right;
+    width: 25%;
+    height: 20rem;
+    padding: 2rem;
+    position: absolute;
+    right: 5rem;
+    bottom: 3rem;
+    border-radius: 10px;
+    
+    h3, a {
+      color: #fff;
+      font-family: $balooBhai;
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    a {
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-top: 5rem;
+    }
+
+    svg {
+      width: 13%;
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .blogHeader_background {
+    width: 100vw;
+    height: fit-content;
+
+    .blogHeader {
+      
+    }
+
+    .categoriesList {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      width: 100%;
+      height: fit-content;
+  
+      button {
+        margin: .5rem;
+      }
+  
+      button:hover {
+        background-color: $green;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .headerArticle {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    max-height: none;
+
+    img {
+      width: 100%;
+      height: none;
+    }
+
+    .articleTitle {
+      width: 100%;
+      height: fit-content;
+      margin-top: 1rem;
+      position: initial;
+    }
+  }
+}

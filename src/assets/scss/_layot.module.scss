@@ -1,0 +1,317 @@
+@import './variables.scss';
+
+.menu {
+  padding: 1rem;
+  width: 100vw;
+  height: 20vh;
+  position: absolute;
+  transition: all cubic-bezier(1,.09,.25,1) .5s;
+  -moz-transition: all cubic-bezier(1,.09,.25,1) .5s;
+  -webkit-transition: all cubic-bezier(1,.09,.25,1) .5s;
+  z-index: 200;
+
+  .rowMenu {
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 65%;
+      }
+
+      #numpiLoto {
+        width: 20% !important;
+        transition: all cubic-bezier(1,.09,.25,1) .5s;
+        -moz-transition: all cubic-bezier(1,.09,.25,1) .5s;
+        -webkit-transition: all cubic-bezier(1,.09,.25,1) .5s;
+      }
+    }
+
+    .menuLinks {
+      font-family: $bellota;
+      display: flex;
+      align-items: center;
+  
+      a {
+        text-decoration: none;
+        color: #fff;
+        margin: .5rem auto;
+  
+        h3 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+/** MOBILE MENU */
+
+.mobileMenu {
+  background-color: $green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40vw;
+  width: 100vw;
+
+  .logoImage {
+    
+    img {
+      width: 50%;
+      margin-top: 1rem;
+      margin-left: 25%;
+    }
+  }
+
+  .lotoNumpiImage {
+    width: 15%;
+  }
+
+}
+
+.menuIcon {
+  background-color: transparent;
+  width: 13vw;
+  position: fixed;
+  right: 5%;
+  bottom: 8%;
+  z-index: 100;
+  border: transparent;
+}
+
+.sideMenuBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0000007a;
+  transition: opacity ease .8s;
+
+  .sideMenu {
+    background-color: #fff;
+    float: right;
+    width: 50%;
+    height: 100%;
+    z-index: 200;
+    position: sticky;
+
+    .sideMenuLogo {
+      display: block;
+      width: 30%;
+      margin: 2rem auto;
+    }
+    
+    .sideMenuItems {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      margin: 1.5rem;
+      
+      a {
+        color: $green;
+        margin-top: 1rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.main {
+  background-color: $background;
+  min-height: 60vh;
+  width: 100vw;
+
+  h1 {
+    width: 100%;
+  }
+}
+
+/** ====================================== FOOTER ===================================== */
+.footer {
+  position: relative;
+  background-color: $green;
+  padding-top: 2rem;
+  width: 100vw;
+  height: 18rem;
+
+  .footerContainer {
+    height: 100%;
+
+    .logo {
+      margin-top: 1rem;
+  
+      img:nth-child(1) {
+        width: 100%;
+      }
+  
+      img:nth-child(2) {
+        display: block;
+        margin: .5rem auto;
+        width: 20%;
+      }
+      
+    }
+
+    .siteMap {
+      color: #fff;
+      margin-top: 1.5rem;
+
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        list-style: none;
+        height: 3rem;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .speechBubbles {
+      color: #fff;
+
+      div {
+        height: 6rem;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: .7rem 2rem;
+      }
+
+      div:nth-child(1) {
+        background-image: url('/speech_bubble_dark-blue.png');
+        margin-left: 3.5rem;
+      }
+
+      div:nth-child(2) {
+        background-image: url('/speech_bubble_leight-blue.png');
+        margin-top: -.5rem;
+        margin-right: 5rem;
+      }
+    }
+
+    .rrss {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+
+      a {
+        width: 70%;
+
+        svg {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+        }
+      }
+
+      a:nth-child(2) {
+        svg {
+          width: 110%;
+        }
+      }
+    }
+
+    .bottomPhrase {
+      color: #fff;
+      bottom: .5rem;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+  
+      p {
+        margin: 0 auto;
+        padding: 0;
+        width: fit-content;
+      }
+    }
+
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .main {
+    width: 100vw;
+  }
+  .footer {
+    height: fit-content;
+    
+    .footerContainer {
+      .siteMap {
+        order: 1;
+      }
+
+      .logo {
+        order: 4;
+
+        a {
+          width: 80%;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+  
+
+      .speechBubbles {
+        order: 2;
+        margin-top: 2rem;
+
+        div:nth-child(1) {
+          margin-left: 0;
+        }
+  
+        div:nth-child(2) {
+          margin-top: 1rem;
+          margin-right: 0;
+        }
+      }
+
+      .rrss {
+        order: 3;
+        margin: 2rem auto;
+        justify-content: space-evenly;
+        flex-direction: row;
+
+        a {
+          width: 20%;
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        a:nth-child(2) {
+          svg {
+            width: 150%;
+          }
+        }
+      }
+
+      .bottomPhrase {
+        position: initial;
+        transform: translate(0%, 0%);
+
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@import './controls/theme_query.mixin.scss';
+
+.newsletterBg {
+  @include mobile-xs {
+    background-size: cover;
+  }
+
+  @include desktops {
+    display: block;
+  }
+
+  background-image: url('/newsletter_bg.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 80vh;
+
+  .newsletterTitle {
+    @include desktops {
+      margin-top: 6rem;
+    }
+
+    display: flex;
+    justify-content: center;
+
+    h3 {
+      font-family: 'Dosis', sans-serif;
+      color: #fff;
+      font-size: 1.9rem;
+    }
+  }
+}
+
+.subscribeEmailInput {
+  @include desktops {
+    background-color: #028c82;
+    display: flex;
+    margin-top: 10rem;
+    width: 80vw;
+    height: 5.5vw;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    float: right;
+  }
+
+  background-color: transparent;
+  width: 100vw;
+  height: fit-content;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+
+  input {
+    height: 2.5rem;
+    padding: .5rem;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Dosis', sans-serif;
+  }
+
+  input,
+  button {
+    display: block;
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  button {
+    background-color: #3F7BBE;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+    height: 2.5rem;
+  }
+}

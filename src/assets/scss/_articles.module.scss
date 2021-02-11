@@ -1,0 +1,260 @@
+@import './variables.scss';
+
+.headerArticleBg {
+  background-color: $green;
+  background-position: 100% 100%;
+  width: 100vw;
+  min-height: 10rem;
+}
+
+/** Article LIST */
+.articleListContainer {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  .articlesH2 {
+    color: $green;
+    font-family: $balooBhai;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .articles_banner {
+    height: 100vh;
+    position: relative;
+    left: 4rem;
+  }
+  
+  .cardsRow {
+    margin-top: 3rem;
+  }
+
+  .cargarMas {
+    margin: 2rem auto 0;
+    width: fit-content;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: $green;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+/** ARTICLE CARD */
+.articleCard {
+  position: relative;
+  box-sizing: content-box;
+  min-width: 95%;
+  height: fit-content;
+  min-height: 34rem;
+  display: block;
+  border: 1px solid $green;
+  border-radius: 10px;
+  transition: all .2s ease-in-out;
+
+  img {
+    width: 100%;
+    height: 20rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  h3 {
+    min-height: 7rem;
+    height: fit-content;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: $balooBhai;
+    font-weight: bold;
+    color: $green;
+  }
+
+  .date {
+    float: right;
+    position: relative;
+    bottom: 1rem;
+    right: 2rem;
+    color: $green;
+  }
+}
+
+.articleCard:hover {
+  scale: 1.03;
+  -webkit-box-shadow: 5px 5px 15px -8px rgba(0,0,0,0.91); 
+  box-shadow: 5px 5px 15px -8px rgba(0,0,0,0.91);
+}
+
+/* ARTICLE PAGE */
+.imageArticle {
+  height: 30vw;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 8px;
+}
+
+.article_layout {
+  margin-top: 2rem;
+
+  h1 {
+    font-family: $balooBhai;
+    color: $green;
+    font-weight: bold;
+  }
+
+  .article_content {
+    margin-bottom: 4rem;
+
+    p {
+      font-size: 1rem;
+      text-align: justify;
+    }
+
+    h2, h3 {
+      font-family: $balooBhai;
+      color: $green;
+      margin-top: 3rem;
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+  }
+
+  .lotoImage {
+    display: block;
+    margin: 0 auto;
+    width: 3rem;
+  }
+}
+
+/* COMMENTS SECTION */
+.commentsSection {
+  margin: 2rem 0;
+  border-top: 3px solid $green;
+
+  h2 {
+    margin-top: 2rem;
+    font-weight: bold;
+    color: $green;
+  }
+
+  .commentItem {
+    margin: 2rem 0 3rem 0;
+    padding: .5rem;
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $green;
+    }
+
+    p {
+      margin-bottom: .5rem;
+    }
+
+    .date {
+      position: absolute;
+      right: 0;
+      font-size: .9rem;
+      color: #b5b4b4;
+    }
+  }
+
+  h4 {
+    margin-top: 2rem;
+    font-family: $balooBhai;
+    color: $green;
+  }
+}
+
+.commentForm {
+  width: 100%;
+
+  input {
+    margin-bottom: 1rem;
+    width: 40%;
+    padding: .3rem;
+    border-radius: 5px;
+    border: 1px solid $green;
+  }
+
+  input:nth-child(3) {
+    width: 56%;
+    margin-left: 2rem;
+  }
+
+  label {
+    width: 100%;
+    color: $green;
+    font-weight: bold;
+  }
+
+  textarea {
+    width: 100%;
+    height: 10rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid $green;
+    resize: unset;
+  }
+
+  button {
+    float: right;
+  }
+}
+
+/* Related Articles */
+.relatedArticles {
+  margin-top: 4rem;
+
+  .relatedArticle_card {
+    width: 100%;
+    margin-top: 1rem;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    h3 {
+      color: $green;
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+
+    span {
+      color: $green;
+      float: right;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .articleListContainer {
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+
+    .cardsRow {
+      margin-top: 0;
+    }
+
+    .articles_banner {
+      display: none;
+      position: initial;
+    }
+  }
+
+  .articleCard {
+    margin-top: 1rem;
+  }
+
+  .imageArticle {
+    width: 95%;
+    height: 100%;
+  }
+
+  .relatedArticles {
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+}

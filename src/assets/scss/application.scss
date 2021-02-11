@@ -1,0 +1,70 @@
+@import './variables.scss';
+@import 'https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap';
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+p {
+  font-family: "Bellota", cursive;
+}
+
+h1 {
+  font-family: $balooBhai;
+  font-weight: bold;
+  color: #fff;
+}
+
+h3 {
+  font-family: 'Dosis', sans-serif;
+}
+
+h2 {
+  font-family: $balooBhai;
+  color: $green;
+}
+
+.container {
+  max-width: 1400px !important;
+}
+
+.confirm-button {
+  background-color: $green;
+  width: 15%;
+  padding: .3rem;
+  margin: 1rem;
+  font-family: $balooBhai;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: .5rem;
+  transition: all ease .5s;
+}
+
+.confirm-button:hover {
+  background-color: $blue;
+}
+
+.button-blue {
+  background-color: $blue;
+  width: fit-content;
+  box-sizing: border-box;
+  padding: .3rem 2rem;
+  margin: .5rem;
+  font-family: $balooBhai;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: .5rem;
+  transition: all ease .5s;
+}
